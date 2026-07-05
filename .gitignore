@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.pyo
+
+.venv/
+venv/
+env/
+
+ba_momotalk_debug/
+*.png
+*.jpg
+*.jpeg
+*.webp
+
+.env
+.DS_Store
+Thumbs.db
