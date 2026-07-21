@@ -50,8 +50,11 @@ This project is only intended for clearing MomoTalk and relationship story rewar
 python ba_momotalk_auto.py
 ```
 
-如果你的 MuMu ADB 路径或端口不同，可以显式传入：
-
+如果你的 MuMu ADB 路径或端口和默认不一样，可以手动指定：
+```bash
+python ba_momotalk_auto.py --adb "<你的 MuMu adb.exe 路径>" --serial <你的 MuMu ADB 设备地址>
+```
+比如格式大概是：
 ```bash
 python ba_momotalk_auto.py --adb "D:\MuMuPlayer-12.0\shell\adb.exe" --serial 127.0.0.1:16384
 ```
