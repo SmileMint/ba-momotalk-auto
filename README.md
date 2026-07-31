@@ -29,7 +29,7 @@ This project is only intended for clearing MomoTalk and relationship story rewar
 - 保存最后截图与调试截图，便于排查卡住的位置。
 
 ## 使用前准备
-
+0. Python运行环境(本次运行版本为3.13.9)
 1. 安装并启动 MuMu Player 12。
 2. 在模拟器中打开《Blue Archive / 碧蓝档案》，进入可点击 MomoTalk 的主界面。
 3. 确认 MuMu 的 ADB 路径存在，默认路径为：
@@ -38,7 +38,7 @@ This project is only intended for clearing MomoTalk and relationship story rewar
    D:\MuMuPlayer-12.0\shell\adb.exe
    ```
 
-4. 安装 Python 依赖：
+4. 安装 Python 依赖：(前置python安装与环境配置请自行准备好)
 
    ```bash
    pip install -r requirements.txt
@@ -57,6 +57,13 @@ python ba_momotalk_auto.py --adb "<你的 MuMu adb.exe 路径>" --serial <你的
 比如格式大概是：
 ```bash
 python ba_momotalk_auto.py --adb "D:\MuMuPlayer-12.0\shell\adb.exe" --serial 127.0.0.1:16384
+```
+MuMu模拟器的 ADB 设备地址查看：
+```bash
+首先启动你安装了碧蓝档案的mumu模拟器（如果有多开，你打算在哪个设备执行就启动哪一个）
+点击mumu模拟器右上角三个点→设备设置→问题诊断→在网络信息一栏中找到“ADB调试端口”
+记录下你的端口号，我的是“5555,16384”(就是后面那串)
+脚本必须指定运行《碧蓝档案》端口的那个实例
 ```
 
 常用参数：
@@ -82,7 +89,7 @@ python ba_momotalk_auto.py --max-rewards 20 --max-steps 300
 - 修改账号设置。
 - 领取邮箱或任务奖励。
 
-如果脚本遇到网络错误、重连提示、异常弹窗、点击无效、无法识别当前画面等情况，会停止并输出日志。通常重启游戏后再次运行即可。
+如果脚本遇到网络错误、重连提示、异常弹窗、点击无效、无法识别当前画面等情况，会停止并输出日志。通常重启游戏后再次运行脚本即可。
 
 ## 免责声明
 
