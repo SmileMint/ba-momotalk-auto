@@ -103,6 +103,7 @@ python ba_momotalk_auto.py --max-rewards 20 --max-steps 300
 2026年10月16日。
 
 修改了ba_momotalk_auto.py中的self.back(f"story skip attempt {attempt + 1}", delay=2.5) %1.0改为2.5
+
 发现有时刚刚进入好感剧情时返回暂时无法点击的情况，因此延长了每次点击返回后的要等待间隔为2.5秒，尝试点击三次。
 
 ## License
