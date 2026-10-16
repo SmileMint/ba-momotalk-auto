@@ -58,6 +58,12 @@ python ba_momotalk_auto.py --adb "<你的 MuMu adb.exe 路径>" --serial <你的
 ```bash
 python ba_momotalk_auto.py --adb "D:\MuMuPlayer-12.0\shell\adb.exe" --serial 127.0.0.1:16384
 ```
+
+我们还发现了另一个可行的ADB位置，这可能是源于模拟器的某次更新：
+```bash
+python ba_momotalk_auto.py --adb "D:\MuMuPlayer\nx_device\12.0\shell\adb.exe" 
+```
+
 MuMu模拟器的 ADB 设备地址查看：
 ```bash
 首先启动你安装了碧蓝档案的mumu模拟器（如果有多开，你打算在哪个设备执行就启动哪一个）
