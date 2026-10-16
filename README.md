@@ -97,6 +97,13 @@ python ba_momotalk_auto.py --max-rewards 20 --max-steps 300
 
 使用自动化脚本可能违反游戏服务条款或带来账号风险。请自行判断并承担使用后果。建议只在你完全理解脚本行为、接受风险，并确认不会影响他人或破坏游戏环境的前提下使用。
 
+
+## 脚本更新说明
+
+2026年10月16日
+修改了ba_momotalk_auto.py中的self.back(f"story skip attempt {attempt + 1}", delay=2.5) %1.0改为2.5
+发现有时刚刚进入好感剧情时返回暂时无法点击的情况，因此延长了每次点击返回后的要等待间隔为2.5秒，尝试点击三次。
+
 ## License
 
 MIT License
