@@ -421,7 +421,7 @@ class BAAuto:
                 return True
             if self.is_momotalk(img):
                 return True
-            self.back(f"story skip attempt {attempt + 1}", delay=1.0)
+            self.back(f"story skip attempt {attempt + 1}", delay=2.5)  % delay=1.0调整为2.5,部分剧情刚刚进入时无法立刻点出返回菜单,延长点击的等待时间，尝试三次点击，每次间隔2.5秒
             img = self.screenshot()
             confirm = self.find_confirm_button(img)
             if confirm is not None:
