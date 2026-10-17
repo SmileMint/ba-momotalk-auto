@@ -44,6 +44,24 @@ This project is only intended for clearing MomoTalk and relationship story rewar
    pip install -r requirements.txt
    ```
 
+## Windows 一键启动
+
+安装 Python 3.10 或更新版本并启动 MuMu 和游戏后，双击 `start.bat`。
+
+启动器会检查 Python，首次在项目目录创建 `.venv` 并安装 `requirements.txt` 中的依赖，不修改全局 Python 环境。依赖安装需要网络；失败后可重新运行。已有 `.venv` 也会检查 Python 版本；版本过旧或无法运行时会提示删除项目中的 `.venv` 后重新启动。
+
+ADB 路径会从常用目录和 Windows 安装信息中查找；找不到时提示输入完整路径。启动器优先使用已连接设备，未发现设备时尝试默认端口，再提示输入 MuMu「设备设置 → 问题诊断」中的本地 ADB 端口或地址（支持 `16384`、`127.0.0.1:16384` 和 `5555,16384`）。多设备时必须选择目标设备。请确保目标游戏已进入主界面或 MomoTalk。
+
+运行日志显示在窗口中，按 Ctrl+C 停止。结束或失败后窗口保留，便于查看原因。请避免在同一设备上同时启动多个自动化进程。
+
+也可在终端传入原脚本参数，例如先进行只截图、不点击的检查：
+
+```bat
+start.bat --self-test
+start.bat --max-rewards 20 --max-steps 300
+```
+
+已有自定义 ADB 路径或设备的用户仍可直接使用下方原 Python 命令。
 ## 运行
 
 ```bash
